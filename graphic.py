@@ -1,4 +1,5 @@
-import os, time, sys
+import os
+import time
 
 FRAMES = []
 FRAME0 = ["    ╔════════════╗                 \r",
@@ -215,6 +216,7 @@ LABELS = ["             _A____                \r",
           "             DANGMAN               \r",
           "             xANGMAM               \r",
           "\"HANGMAN\" GAME by Gallow's pole software inc. \r"]
+
 FRAMES.append(FRAME0)
 FRAMES.append(FRAME1)
 FRAMES.append(FRAME2)
@@ -233,13 +235,12 @@ FRAMES.append(FRAME14)
 FRAMES.append(FRAME15)
 FRAMES.append(FRAME16)
 
-
+# draws a short animation to present the game
 def splash():
     for idx in range(len(FRAMES)):
         os.system('cls')
         for line in FRAMES[idx-1]:
             print(line)
         print(LABELS[idx-1])
-
         time.sleep(0.01)
     time.sleep(1)
